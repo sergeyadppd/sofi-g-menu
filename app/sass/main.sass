@@ -1,0 +1,126 @@
+@import "_varSass.sass"
+
+html, body
+	font-size: 16px
+	font-family: "OpenSansRegular"
+	max-width: 305px
+
+// ----- default Sass Style ----- //
+.no-padding
+	padding: 0
+
+// button
+.flat-button
+	display: inline-block
+	border: none
+	color: $whiteColor
+	text-decoration: none
+	background-color: $accentColor
+	padding: 5px 12px
+	font-size: 0.9em
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 1px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none
+	cursor: pointer
+	transition: all 0.3s cubic-bezier(0.42,0,0.58,1)
+	&:hover
+		color: $whiteColor
+		text-decoration: none
+		background-color: $subColor
+	&:focus
+		color: $whiteColor
+		text-decoration: none
+
+.material-button
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $accentColor
+	padding: 15px 45px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accentColor, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+		outline: none
+	&:hover
+		background-color: ($accentColor, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accentColor, 5%)
+		&::after
+			opacity: .32
+
+// padding std
+.std-pd-medium
+	padding-top: 30px
+	padding-bottom: 30px
+	& h1, h2, h3, h4, h5, h6
+		&:first-child
+			margin-top: 0
+.std-pd-large
+	padding-top: 50px
+	padding-bottom: 50px
+
+// 
+p:last-child
+	margin-bottom: 0
+
+// footer down
+body, html
+	height: 100%
+.wrapper
+	display: flex
+	flex-direction: column
+	height: 100%
+.content
+	flex: 1 0 auto
+.footer
+	flex: 0 0 auto
+
+
+
+
+
+// media quaries (Desktop first!)
+// Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px)
+	body
+		
+// Medium devices (desktops, 992px and up)
+@media (max-width: 1199.9px)
+	body
+		
+// Small devices (tablets, 768px and up)
+@media (max-width: 991.9px)
+	body
+		
+// Extra small devices
+@media (max-width: 767.9px)
+	body
