@@ -1,0 +1,243 @@
+/* Новые стили */
+
+div#finSliderMenu-menuBlock{
+	position: absolute;
+	z-index: 1101 !important; /*не менять*/
+	background-color: #333;/*#171717;*/
+	color: #fff;
+	top: 0;
+	display: none; /*не менять*/
+}
+div#finSliderMenu-menuContentBlock{
+	width:auto;
+	padding: 60px 5% 0 5%;
+	position: fixed;
+	display: none; /*не менять*/
+}
+
+.fin-hmb-line-wrapp{
+	position: relative;
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	cursor:pointer;
+	/*margin: 0 auto;*/
+}
+
+.fin-hmb-line{
+	position: relative;
+	display: block;
+	width: 23.33px;
+	height: 2px;
+	margin: auto;
+
+	
+
+	/*margin: 0 0 4px 0;*/
+	background-color: #fff;
+	/*transition: all 600ms ease-in-out;*/
+}
+
+.fin-hmb-line.fin-hmb-top{
+	top: 0;
+}
+
+.fin-hmb-line.fin-hmb-center{
+	top: 6px;
+}
+
+.fin-hmb-line.fin-hmb-bottom{
+	top: 12px;
+}
+
+.fin-hmb-line.center{
+	/*margin: 3px 0;*/
+}
+
+/* Остальное */
+
+/*div#finSliderMenu-menuContentBlock span.esc-btn{
+	position:absolute;
+	top: 30px;
+	right: 5%;
+	cursor: pointer;
+	z-index: 10001;
+	width: 30px;
+	height: 30px;
+	display: block;
+	background-size: cover;
+	background-image: url(../img/ui/close-ico-white.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}*/
+
+span#finSliderMenu-menuOpenButton.finSliderMenu-disabled-btn{ 
+opacity: 0.3; 
+cursor:default; 
+} 
+span#finSliderMenu-menuCloseButton.finSliderMenu-disabled-btn{
+opacity: 0.3; 
+cursor:default; 
+}
+.hamburger-menu{
+padding-top: 10px;
+}
+.hamburger-menu span.glyphicon-menu-hamburger{
+font-size: 25px;
+-webkit-transition: all 0.2s ease-out 0.1s;
+-moz-transition: all 0.2s ease-out 0.1s;
+-o-transition: all 0.2s ease-out 0.1s;
+transition: all 0.2s ease-out 0.1s;	
+}
+.hamburger-menu span.glyphicon-menu-hamburger:hover{
+cursor: pointer;
+}
+div#finSliderMenu-menuBlock h2.block-title,
+div#finSliderMenu-menuBlock h4.block-title{
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+div#finSliderMenu-menuBlock ul.menu {
+	cursor: default;
+	margin-left: 0;
+	padding-top: 15px;
+	position:relative;
+	margin-bottom: 15px;
+}
+div#finSliderMenu-menuBlock ul.menu li.leaf{
+	line-height: 0.9;
+	border-bottom: none;
+	padding: 0px;
+}
+div#finSliderMenu-menuBlock ul.menu li.leaf a{
+	color: #949494;
+	border-bottom: none;
+	text-decoration: none;
+	padding: 10px 0 10px 0;
+	-webkit-transition: all 0.2s ease-out 0.1s;
+	-moz-transition: all 0.2s ease-out 0.1s;
+	-o-transition: all 0.2s ease-out 0.1s;
+	transition: all 0.2s ease-out 0.1s;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 15px;
+}
+
+/* позиционирование */
+
+div.menu-col-1{
+	min-width: 200px;
+	float:left;
+	width:50%;
+}
+
+div.menu-col-2{
+	min-width: 200px;
+	float:left;
+	width:50%;
+}
+
+div.menu-col-1 ul{
+	float:left;
+	width:90%;
+}
+
+/* наведение */
+
+div.menu-col-1 ul li:hover{
+	background-color: #e5e5e5;
+	color:#333 !important;
+}
+
+div.menu-col-1 ul li a:hover{
+	padding-left:5% !important;
+	color:#333 !important;
+	cursor:pointer;
+}
+
+div.menu-col-2 ul li:hover{
+	background-color: #e5e5e5;
+	color:#333 !important;
+}
+
+div.menu-col-2 ul li a:hover{
+	padding-left:5% !important;
+	color:#333 !important;
+	cursor:pointer;
+}
+
+div#finSliderMenu-menuContentBlock form.form-search.content-search{
+	width:100%;
+}
+
+
+div#finSliderMenu-menuContentBlock li.leaf a{
+	line-height: 1.5;
+}
+
+div#finSliderMenu-menuContentBlock{
+	min-width:320px;
+}
+
+/* ----- scroll-style ----- */
+.custom-scroll-style::-webkit-scrollbar-track
+{
+	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+	border-radius: 0;
+	background-color: #333;
+}
+
+.custom-scroll-style::-webkit-scrollbar
+{
+	width: 15px;
+	background-color: #333;
+}
+
+.custom-scroll-style::-webkit-scrollbar-thumb
+{
+	border-radius: 0;
+	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
+	background-color: #444;
+}
+
+
+
+#finSliderMenu-menuCloseButton-container{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 30px;
+}
+/* close button inside content menu */
+#finSliderMenu-menuCloseButton{
+	z-index: 10001;
+	float: right;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	
+}
+
+#finSliderMenu-menuCloseButton-item1{
+	transform: rotate(45deg);
+	background-color: white;
+	height: 2px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 10002;
+	position: absolute;
+}
+
+#finSliderMenu-menuCloseButton-item2{
+	transform: rotate(135deg);
+	background-color: white;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	top: 0;
+	z-index: 10003;
+	position: absolute;
+}

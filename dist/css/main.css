@@ -1,9 +1,167 @@
-.button {
+html, body {
+  font-size: 16px;
+  font-family: "OpenSansRegular";
+  max-width: 305px; }
+
+.menu__substrate {
+  left: 0px;
+  background-color: rgba(51, 51, 51, 0.6);
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%; }
+
+.menu__container {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: black;
+  cursor: default;
+  -webkit-transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1); }
+
+@media screen and (max-width: 768px) {
+  .menu__container {
+    width: 80%; } }
+
+@media screen and (min-width: 768px) {
+  .menu__container {
+    width: 80%; } }
+
+@media screen and (min-width: 992px) {
+  .menu__container {
+    width: 80%; } }
+
+@media screen and (min-width: 1200px) {
+  .menu__container {
+    width: 80%; } }
+
+.menu__close {
+  width: 0; }
+
+.menu__content {
+  background: #5f5f5f;
+  width: 90%;
+  height: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%; }
+
+.close__btn__container {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 30px; }
+
+.close__btn {
+  z-index: 10001;
+  float: right;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1); }
+
+.close__btn:hover {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.close__btn__line {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 14px; }
+
+.close__btn__line--1 {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 10002; }
+
+.close__btn__line--2 {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+  z-index: 10003; }
+
+.open__btn__container {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  cursor: pointer; }
+
+.open__btn__line {
+  position: relative;
+  display: block;
+  width: 23.33px;
+  height: 2px;
+  margin: auto;
+  background: #ccc; }
+
+.open__btn__line--top {
+  top: 0; }
+
+.open__btn__line--center {
+  top: 6px; }
+
+.open__btn__line--buttom {
+  top: 12px; }
+
+.animate__close__btn {
+  -webkit-animation-name: animate-close-btn;
+          animation-name: animate-close-btn; }
+
+@-webkit-keyframes animate-close-btn {}
+
+@keyframes animate-close-btn {}.no-padding {
+  padding: 0; }
+
+.flat-button {
   display: inline-block;
   border: none;
   color: #fff;
   text-decoration: none;
-  background-color: #333;
+  background-color: #4bcaff;
+  padding: 5px 12px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1); }
+  .flat-button:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #f41301; }
+  .flat-button:focus {
+    color: #fff;
+    text-decoration: none; }
+
+.material-button {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  background-color: #4bcaff;
   padding: 15px 45px;
   font-size: 13px;
   text-transform: uppercase;
@@ -18,7 +176,7 @@
   -o-transition: background-color .1s ease;
   transition: background-color .1s ease;
   cursor: pointer; }
-  .button::after {
+  .material-button::after {
     -webkit-transition: background-color .2s ease;
     -o-transition: background-color .2s ease;
     transition: background-color .2s ease;
@@ -27,25 +185,38 @@
     height: 4px;
     bottom: 0;
     width: 100%;
-    background-color: black;
+    background-color: #00354b;
     opacity: .18;
     -webkit-border-bottom-left-radius: 2px;
             border-bottom-left-radius: 2px;
     -webkit-border-bottom-right-radius: 2px;
             border-bottom-right-radius: 2px;
     left: 0; }
-  .button:focus, .button:hover {
+  .material-button:focus, .material-button:hover {
     text-decoration: none;
     color: #fff;
     outline: none; }
-  .button:hover {
-    background-color: #333, 5%; }
-    .button:hover::after {
+  .material-button:hover {
+    background-color: #4bcaff, 5%; }
+    .material-button:hover::after {
       opacity: .22; }
-  .button:active {
-    background-color: #262626; }
-    .button:active::after {
+  .material-button:active {
+    background-color: #32c2ff; }
+    .material-button:active::after {
       opacity: .32; }
+
+.std-pd-medium {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .std-pd-medium h1:first-child, .std-pd-medium h2:first-child, .std-pd-medium h3:first-child, .std-pd-medium h4:first-child, .std-pd-medium h5:first-child, .std-pd-medium h6:first-child {
+    margin-top: 0; }
+
+.std-pd-large {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+p:last-child {
+  margin-bottom: 0; }
 
 body, html {
   height: 100%; }
